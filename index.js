@@ -84,19 +84,19 @@ app.post('/add-shop', async (req, res) => {
 	res.redirect('/shops');
  });
 
-app.get('/my-deals', async (req, res) => {
-	console.log(req.query)
-	if (req.query.amount) {
-	const	amount = req.query.amount
-	const deals =	await avoServices.recommendDeals(amount);
-		res.render('deals/my-deals', {amount, deals})
-	}
-	res.render('deals/my-deals')
-});
-app.post('/my-deals', async (req, res) => {
-	//req.session.amount = req.body.amount;
-	res.redirect('/my-deals');
-});
+// app.get('/my-deals', async (req, res) => {
+// 	console.log(req.query)
+// 	if (req.query.amount) {
+// 	const	amount = req.query.amount
+// 	const deals =	await avoServices.recommendDeals(amount);
+// 		res.render('deals/my-deals', {amount, deals})
+// 	}
+// 	res.render('deals/my-deals')
+// });
+// app.post('/my-deals', async (req, res) => {
+// 	//req.session.amount = req.body.amount;
+// 	res.redirect('/my-deals');
+// });
 
 // start  the server and start listening for HTTP request on the PORT number specified...
 app.listen(PORT, function () {
