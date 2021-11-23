@@ -1,4 +1,4 @@
-module.exports = function(pool) {
+export default function AvoShopper(pool) {
 
 	async function createShop(shopName) {
 		const result = await pool.query(`insert into shop (name) values ($1) returning id`, [shopName]);
@@ -14,7 +14,7 @@ module.exports = function(pool) {
 	}
 
 	async function dealsForShop(shopId) {
-		const result = await pool.query(`select * from avo_deal where shop_id = $1`, [shopId]);
+		const result = await pool.query(`select * , round((price/qty), 2) as unit_price from avo_deal join shop on avo_deal.shop_id = shop.id where shop_id = $1`, [shopId]);
 		return result.rows;
 	}
 

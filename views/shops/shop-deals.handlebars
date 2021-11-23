@@ -1,0 +1,9 @@
+<h2>Take a look at the deals available at {{shopName}}</h2>
+<ul>
+  {{#each shopDeals}}
+  <li>{{qty}} for R{{price}}</li>
+    <ul>
+      <li>R{{unit_price}} per avocado</li>
+    </ul>
+  {{/each}}
+</ul>
