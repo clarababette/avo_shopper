@@ -88,13 +88,15 @@ app.post('/add-shop', async (req, res) => {
  });
 
 app.get('/my-deals', async (req, res) => {
+	
 	console.log(req.query)
 	if (req.query.amount) {
 	const	amount = req.query.amount
 	const deals =	await avoServices.recommendDeals(amount);
 		res.render('deals/my-deals', {amount, deals})
+	} else {
+		res.render('deals/my-deals')
 	}
-	res.render('deals/my-deals')
 });
 app.post('/my-deals', async (req, res) => {
 	//req.session.amount = req.body.amount;
