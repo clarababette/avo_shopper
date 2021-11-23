@@ -1,7 +1,21 @@
-<h2>Top deals</h2>
 
+<ul>
+  <li>
+    <a href="/add-deal">Add more deals!</a>
+  </li>
+  <li>
+    <a href="/shops">View more deals!</a>
+  </li>
+  <li>
+    <a href="/my-deals">Find the best deals for your budget!</a>
+  </li>
+</ul>
+<h2>Top deals</h2>
+<div class="top-deals">
 {{#each topDeals}}
-<span>{{qty}} for {{price}}</span>
-<span>{{unit_price}} per avocado</span>
-<span>{{shop_name}}</span>
+<div>
+<strong>{{qty}} for {{price}} at {{shop_name}}</strong>
+<span>That's {{unit_price}} per avocado!</span>
+</div>
 {{/each}}
+</div>

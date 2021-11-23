@@ -1,5 +1,5 @@
 body {
-	background-color: lightseagreen;
+	background-color: rgb(93, 180, 97);
 	color: whitesmoke;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -7,4 +7,27 @@ body {
 .container{
 	margin: auto;
 	width: 80%;
+}
+
+.top-deals {
+	display: grid;
+	row-gap: 1rem;
+}
+
+.top-deals div {
+	display: grid;
+}
+
+img {
+ width: 5rem;
+ margin: 1rem;
+}
+
+ul {
+ list-style: '🥑 '
+}
+
+.err {
+	color: crimson;
+	line-height:3;
 }

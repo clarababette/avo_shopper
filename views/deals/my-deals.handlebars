@@ -1,3 +1,4 @@
+<a href='/'><h3>Home</h3></a>
 <h2>Get the best deals for your budget</h2>
 <form>
   <label for="amount">I want to spend: R</label>
@@ -9,7 +10,7 @@
 <h2>You can get any of these deals for R{{amount}}</h2>
 <ul>
   {{#each deals}}
-  <li>{{qty}} for R{{price}}</li>
+  <li>{{qty}} for R{{price}} at {{name}}</li>
     <ul>
       <li>R{{unit_price}} per avocado</li>
     </ul>

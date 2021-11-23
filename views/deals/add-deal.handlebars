@@ -1,4 +1,6 @@
+<a href='/'><h3>Home</h3></a>
 <h2>Add a new deal</h2>
+<span class='err'>{{err}}</span>
 <form action="/add-deal" method="POST">
 <label for="qty">Quantity:</label>
 <input name="qty" type="number" min="0" value="0">
@@ -6,7 +8,7 @@
 <input name="price" type="number" step="0.01" value="0.00">
 <label for="shop">Shop:</label>
 <select name="shop">
-  <option value="">select a shop</option>
+  <option value="0">select a shop</option>
   {{#each shops}}
   <option value={{id}}>{{name}}</option>
   {{/each}}
