@@ -11,9 +11,9 @@ const connectionString =
   process.env.DATABASE_URL || 'postgresql://localhost:5432/avo_shopper';
 const pool = new Pool({
   connectionString,
-	//   ssl: {
-  //   rejectUnauthorized: false,
-  // },
+	  ssl: {
+    rejectUnauthorized: false,
+  },
 });
 
 const avoServices = AvoShopper(pool);
